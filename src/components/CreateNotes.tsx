@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Form, Button, } from 'react-bootstrap';
+import { Form, Button, Alert } from 'react-bootstrap';
 import { Note } from '../models/note.model';
 
 interface ICreateNotesProps {
@@ -27,7 +27,7 @@ const CreateNotes: React.FC<ICreateNotesProps> = ({ notes, setNotes }) => {
             text: (textRef.current as HTMLTextAreaElement).value,
             color: (colorRef.current as HTMLInputElement).value,
             date: (new Date()).toString()
-        }])
+        }]);
 
         (titleRef.current as HTMLInputElement).value = '';
         (textRef.current as HTMLTextAreaElement).value = '';
